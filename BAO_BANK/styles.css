@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Mobile First Approach */
+@media only screen and (max-width: 768px) {
+    .login-container, .wallet-balance, .recent-activity, .credit-card-section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .wallet-balance {
+        border-radius: 30px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Responsive Image for Logo */
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Responsive Image for Credit Card */
+.credit-card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+h2, h3 {
+    color: magenta;
+    text-align: center;
+}
+
+.login-container, .credit-card-section, .wallet-balance, .recent-activity, .error-container {
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid magenta;
+    border-radius: 5px;
+}
+
+button {
+    background-color: magenta;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkmagenta;
+}
+
+.wallet-balance {
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.transaction-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group button {
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.button-group p {
+    margin: 0;
+    color: red;
+}
+
+.recent-activity {
+    margin-top: 15px;
+}
+
+.activity {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.activity .user-icon {
+    margin-right: 10px;
+}
+
+.error-container {
+    background-color: white;
+    color: red;
+    text-align: center;
+    padding: 30px;
+    border: 2px solid red;
+    border-radius: 10px;
+}

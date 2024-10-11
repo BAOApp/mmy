@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mobile Transaction App</title>
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div id="login-page">
+        <div class="login-container">
+            <img src="https://via.placeholder.com/150" alt="Bank Logo" class="logo"> <!-- Responsive Logo -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button id="login-btn">Login</button>
+            <p id="loading"></p>
+            <p><a href="#">Forgot Password?</a></p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" style="display: none;">
+        <header>
+            <div class="user-info">
+                <div class="user-icon"><i class="fas fa-user"></i></div>
+                <h2>Hello, Kelvin</h2>
+                <p>Welcome back</p>
+            </div>
+            <div>
+                <i class="fas fa-comments"></i>
+                <i class="fas fa-phone"></i>
+            </div>
+        </header>
+
+        <div class="wallet-balance">
+            <h3>Wallet Balance</h3>
+            <p>$1,000.00</p>
+            <div class="transaction-buttons">
+                <div class="button-group">
+                    <button id="receive-btn" title="Receive" onclick="checkConnection('Receive')">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                    <p>Receive</p>
+                </div>
+                <div class="button-group">
+                    <button id="send-btn" title="Send" onclick="checkConnection('Send')">
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                    <p>Send</p>
+                </div>
+                <div class="button-group">
+                    <button id="request-btn" title="Request" onclick="checkConnection('Request')">
+                        <i class="fas fa-question"></i>
+                    </button>
+                    <p>Request</p>
+                </div>
+                <div class="button-group">
+                    <button id="transfer-btn" title="Transfer" onclick="checkConnection('Transfer')">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    <p>Transfer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credit Card Section with Image -->
+        <div class="credit-card-section">
+            <img src="https://via.placeholder.com/300x150" alt="Credit Card" class="credit-card-img"> <!-- Sample Credit Card Image -->
+        </div>
+
+        <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity">
+                <div class="user-icon"><i class="fas fa-user"></i></div>
+                <div>
+                    <strong>Robert %t</strong>
+                    <p>Cine Purchase</p>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="user-icon"><i class="fas fa-user"></i></div>
+                <div>
+                    <strong>Sarah %t</strong>
+                    <p>Block Purchase</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Page -->
+    <div id="error-page" style="display: none;">
+        <div class="error-container">
+            <h1>Error 101</h1>
+            <p>This action is restricted for practical purposes only.</p>
+            <div class="close-icon" onclick="closeError()">✖</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
